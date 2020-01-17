@@ -1,4 +1,4 @@
-//import { FETCH_SERVICE_SUCCESS } from 'types'
+import { FETCH_SERVICE_SUCCESS } from 'types'
 
 
 const INITIAL_STATE = {
@@ -8,9 +8,11 @@ const INITIAL_STATE = {
 
 const selectedService = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-
+        case FETCH_SERVICE_SUCCESS:
+            return { item: action.service }
+        default:
+            return state
     }
-    return state
 }
 
 export default selectedService

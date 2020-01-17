@@ -1,9 +1,6 @@
 import { combineReducers } from 'redux'
 import services from './services'
-import selectedService from './selectedService';
-
-
-
+import selectedService from './selectedService'
 
 const serviceApp = combineReducers({
     services,
